@@ -1,0 +1,151 @@
+/* =========================
+RESET
+========================= */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins', sans-serif;
+}
+
+/* VARIABLES */
+:root{
+--bg:#eef2f6;
+--card:#ffffff;
+--text:#1f2937;
+--sub:#64748b;
+
+--primary:#468189;
+--accent:#77ACA2;
+
+--success:#22c55e;
+--danger:#ef4444;
+
+--shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* BODY */
+body{
+background:linear-gradient(135deg,#eef2f6,#e3e9ee);
+color:var(--text);
+}
+
+/* LAYOUT */
+.layout{
+display:flex;
+min-height:100vh;
+}
+
+/* MAIN FULL */
+.main{
+margin-left:250px;
+padding:40px;
+width:calc(100% - 250px);
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+/* TOPBAR */
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+/* BOTON */
+.btn-top{
+background:var(--success);
+color:white;
+padding:10px 16px;
+border-radius:10px;
+text-decoration:none;
+}
+
+/* BUSCADOR */
+.filtros{
+background:var(--card);
+padding:15px;
+border-radius:12px;
+box-shadow:var(--shadow);
+}
+
+#buscar{
+width:100%;
+padding:12px;
+border-radius:10px;
+border:1px solid #ddd;
+}
+
+/* TABLA */
+.tabla-box{
+background:var(--card);
+padding:25px;
+border-radius:15px;
+box-shadow:var(--shadow);
+overflow-x:auto;
+}
+
+table{
+width:100%;
+/* min-width:1200px; */
+border-collapse:collapse;
+}
+
+thead{
+background:linear-gradient(45deg,var(--primary),var(--accent));
+color:white;
+}
+
+th, td{
+padding:14px;
+text-align:left;
+white-space:nowrap;
+border-bottom:1px solid #eee;
+
+font-size: 10px;
+}
+
+/* BADGE */
+.badge{
+padding:5px 10px;
+border-radius:20px;
+font-size:12px;
+}
+
+.badge.activo{
+background:#dcfce7;
+color:var(--success);
+}
+
+/* BOTONES */
+.acciones{
+display:flex;
+gap:8px;
+}
+
+.btn-editar{
+background:#3b82f6;
+color:white;
+padding:6px 10px;
+border-radius:6px;
+text-decoration:none;
+}
+
+.btn-eliminar{
+background:#ef4444;
+color:white;
+padding:6px 10px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+.main{
+margin-left:0;
+width:100%;
+padding:20px;
+}
+}

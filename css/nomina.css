@@ -1,0 +1,227 @@
+/* =========================
+RESET
+========================= */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins', sans-serif;
+}
+
+/* =========================
+VARIABLES (CONSISTENCIA)
+========================= */
+:root{
+--bg:#eef2f6;
+--card:#ffffff;
+--text:#1f2937;
+--soft:#6b7280;
+
+--primary:#468189;
+--accent:#77ACA2;
+
+--success:#16a34a;
+--danger:#ef4444;
+
+--shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* =========================
+BODY
+========================= */
+body{
+background:var(--bg);
+color:var(--text);
+}
+
+/* =========================
+LAYOUT
+========================= */
+.layout{
+display:flex;
+min-height:100vh;
+}
+
+/* =========================
+MAIN (IMPORTANTE 🔥)
+========================= */
+.main{
+margin-left:250px;
+padding:30px;
+width:calc(100% - 250px);
+}
+
+/* =========================
+TOPBAR
+========================= */
+.topbar{
+margin-bottom:25px;
+}
+
+.topbar h1{
+font-size:26px;
+font-weight:600;
+}
+
+.sub{
+font-size:13px;
+color:var(--soft);
+margin-top:5px;
+}
+
+/* =========================
+TABLA BOX
+========================= */
+.tabla-box{
+background:var(--card);
+padding:20px;
+border-radius:15px;
+box-shadow:var(--shadow);
+overflow-x:auto;
+animation:fadeIn 0.5s ease;
+}
+
+/* =========================
+TABLA
+========================= */
+table{
+width:100%;
+border-collapse:collapse;
+min-width:900px;
+}
+
+/* HEADER */
+thead{
+background:linear-gradient(45deg,var(--primary),var(--accent));
+color:white;
+}
+
+th{
+padding:12px;
+font-size:13px;
+text-align:center;
+}
+
+/* FILAS */
+td{
+padding:12px;
+font-size:13px;
+text-align:center;
+border-bottom:1px solid #eee;
+white-space:nowrap;
+}
+
+/* HOVER */
+tbody tr:hover{
+background:#f1f5f9;
+}
+
+/* FILAS PARES */
+tbody tr:nth-child(even){
+background:#fafafa;
+}
+
+/* =========================
+COLORES DE COLUMNAS
+========================= */
+
+/* AFP / SFS */
+td:nth-child(3),
+td:nth-child(4){
+color:#8B5E3C;
+}
+
+/* ISR */
+td:nth-child(5){
+color:var(--danger);
+}
+
+/* DEDUCCIONES */
+td:nth-child(6){
+color:#c0392b;
+font-weight:500;
+}
+
+/* NETO */
+td:nth-child(7){
+color:var(--success);
+font-weight:700;
+}
+
+/* SALARIO */
+td:nth-child(2){
+font-weight:600;
+color:#2563eb;
+}
+
+/* =========================
+BOTON PROCESAR
+========================= */
+.btn-pagar{
+background:linear-gradient(45deg,var(--primary),var(--accent));
+color:white;
+padding:8px 14px;
+border-radius:8px;
+text-decoration:none;
+font-size:13px;
+font-weight:500;
+transition:0.3s;
+display:inline-block;
+}
+
+.btn-pagar:hover{
+transform:translateY(-2px);
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* =========================
+NO DATA
+========================= */
+.no-data{
+text-align:center;
+padding:20px;
+color:var(--soft);
+}
+
+/* =========================
+SCROLL BONITO
+========================= */
+.tabla-box::-webkit-scrollbar{
+height:8px;
+}
+
+.tabla-box::-webkit-scrollbar-thumb{
+background:var(--accent);
+border-radius:10px;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+@media(max-width:900px){
+
+.main{
+margin-left:0;
+width:100%;
+padding:20px;
+}
+
+table{
+min-width:700px;
+}
+
+}
+
+/* =========================
+ANIMACION
+========================= */
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(15px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
